@@ -16,7 +16,18 @@
 
 </div>
 
+<div>
+    
+    {% for story in user_story %}
+        <h2><a href="{% url 'news:story' story.id %}">{{ story.title }}, <br> {{ story.author.username }} </a></h2>
+    
+        {% endfor %}
+   
+</div>
+
 {% endblock content%}
+
+
 
 
 
