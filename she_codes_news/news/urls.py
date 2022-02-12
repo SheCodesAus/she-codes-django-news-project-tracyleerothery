@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.urls import path
 from . import views
 
@@ -7,6 +8,7 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('<int:pk>/', views.StoryView.as_view(), name='story'),
     path('add-story/', views.AddStoryView.as_view(),name='newStory'),
+    path('<int:pk>/edit-story', views.StoryUpdateView.as_view(), name='editStory'),
 ]
 
 

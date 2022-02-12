@@ -4,6 +4,11 @@ from .models import NewsStory
 from django.urls import reverse_lazy
 from .forms import StoryForm
 
+from django.views.generic.edit import UpdateView
+
+from django.core.exceptions import PermissionDenied
+
+
 
 class IndexView(generic.ListView):
     template_name = "news/index.html"
@@ -34,4 +39,20 @@ class AddStoryView(generic.CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+
+
+class StoryUpdateView(UpdateView):
+    model = NewsStory
+    fields = ['title', 'pub_date', 'content']
+    template_name = "news/story_update_form.html"
+    context_oject_name = "story"
+    success_url = reverse_lazy('news:index')
+    
+    def get_object(self, queryset=None):
+        obj = super().get_object(queryset)
+        if obj.author != self.request.user:
+            raise PermissionDenied
+        return obj
+    
 
