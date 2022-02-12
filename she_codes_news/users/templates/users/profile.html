@@ -4,9 +4,9 @@
 {% block content %}
 
 <div id="user-profile">
-    <h2>{{user.username}}/<h2>
+    <h2>User: {{user.username}}<h2>
     {% if user.get_full_name %}
-        <h3>{{user.get_full_name}} &lt;{{user.email}}&gt; </h3>
+        <h3> Hello! {{user.get_full_name}} &lt;{{user.email}}&gt; </h3>  
     {% else %}
         <h3>{{user.email}}</h3>
     {% endif %}
@@ -19,11 +19,15 @@
 <div>
     
     {% for story in user_story %}
+        <h2>{{ story.category}}</h2>
         <h2><a href="{% url 'news:story' story.id %}">{{ story.title }}, <br> {{ story.author.username }} </a></h2>
-    
-        {% endfor %}
+        {% if story.author == request.user %}
+            <a id="edit_button" href="{% url 'news:editStory' story.id %}">Edit</a>
+        {% endif %}
+    {% endfor %}
    
 </div>
+
 
 {% endblock content%}
 
