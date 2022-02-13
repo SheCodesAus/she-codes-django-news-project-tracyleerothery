@@ -12,6 +12,7 @@ class NewsStory(models.Model):
     )
 
     pub_date = models.DateTimeField()
+    # image_url = models.URLField(default='https://picsum.photos/600')
     content = models.TextField()
     category = models.ForeignKey("news.Category", on_delete=models.CASCADE, null = True, blank = True)
 
