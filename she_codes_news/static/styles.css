@@ -3,11 +3,43 @@
 
 :root {
     --main-font: 'Raleway', sans-serif;
-
-
-
-
 }
+
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("./images/background_image.jpeg");
+  
+    /* Set a specific height */
+    height: 50vh;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .hero-image:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(158, 54, 184, 0.719);
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+
+
 
 body {
     background-color: rgb(240, 239, 239);
@@ -16,8 +48,10 @@ body {
 
 
 img {
-    filter: grayscale(100%);
+  
 }
+
+
 
 h1 {
     font-family: var(--main-font);
@@ -54,5 +88,5 @@ a {
 }
 
 a, p {
-    font-family: monospace;
+    font-family: var(--main-font);
 }
