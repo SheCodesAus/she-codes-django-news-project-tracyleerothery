@@ -11,12 +11,27 @@
 
 {% if request.user.is_authenticated %}
 
-<a href="{% url 'news:newStory' %}">Write New Story</a>
+<a href="{% url 'news:newStory' %}"> <button> Write New Story </button> </a>
 
 {% endif %}
 
+<section class="categories-section">
+{% if categories %}
+  {% for cat in categories %}
+    
+    {{cat.name}}
+    {% endfor %}
+      {% endif %} 
 
 
+<div>
+    <ul>
+        <a href="{% url 'news:category' 'Program' %}">Program</a>
+        <a href="{% url 'news:category' 'Technology' %}">Technology</a>
+        <a href="{% url 'news:category' 'Announcements' %}">Announcements</a>
+        <a href="{% url 'news:category' 'Careers' %}">Careers</a>
+    </ul>
+</div>
 
 <h2>Latest News</h2>
 
@@ -28,6 +43,7 @@
     <p>No stories are available.</p>
   {% endif %}
 </div>
+
 
 <div id="all-stories">
   {% if all_stories %} {% for story in all_stories %}

@@ -1,12 +1,19 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel='stylesheet' type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
 
 {% block content %}
 
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-<input type="submit" value="submit">
+<h6 class="form-header"> Submit a New Story! <h6>
+<section class="form-section">    
+    <form class="form-item" action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="form-button" type="submit" value="submit">
 
-</form>
+    </form>
 
 {% endblock %}

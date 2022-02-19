@@ -1,5 +1,5 @@
 from django.views import generic
-from .models import NewsStory
+from .models import Category, NewsStory
 
 from django.urls import reverse_lazy
 from .forms import StoryForm
@@ -21,8 +21,12 @@ class IndexView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context["latest_stories"] = NewsStory.objects.all()[:4]
         context["all_stories"] = NewsStory.objects.all()
+        context["categories"] = Category.objects.all()
         return context
 
+class CategoryView(generic.DetailView):
+    model = Category
+    slug_field = "name"
 
 class StoryView(generic.DetailView):
     model = NewsStory
