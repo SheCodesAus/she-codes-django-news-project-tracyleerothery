@@ -8,12 +8,13 @@
 
 {% block content%}
 
+{% include "./banner.html" %}
+
 {% if request.user.is_authenticated %}
 
 <a href="{% url 'news:newStory' %}">Write New Story</a>
 
 {% endif %}
-
 
 
 
