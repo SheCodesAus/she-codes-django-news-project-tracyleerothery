@@ -108,6 +108,7 @@ h3 {
     overflow: hidden;
     /* background-color: #333; */
     font-family: Arial;
+    
   }
   
   /* Links inside the navbar */
@@ -131,9 +132,9 @@ h3 {
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: #f9f9f9;
     padding: 14px 16px;
-    background-color: inherit;
+    background-color: #8246af;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
   }
@@ -166,7 +167,7 @@ h3 {
   
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #ffff;
+    background-color: #8246af;
   }
   
   /* Show the dropdown menu on hover */
