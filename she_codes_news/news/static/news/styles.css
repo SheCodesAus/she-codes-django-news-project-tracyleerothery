@@ -22,6 +22,54 @@ header {
     object-fit: cover;
 }
 
+#write_story {
+    text-align: center;
+}
+#button {
+    font-family: "bebas-neue-by-fontfabric", Sans-serif;
+    font-size: 26px;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #8246af;
+    color: azure;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #8246af;
+}
+
+
+#button:hover {
+    background-color: azure;
+    color: #8246af;
+}
+
+.story_button {
+    background-color: #8246af; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.story_button1 {
+    background-color: #8246af; 
+    color: white;
+    border: 2px solid #8246af;
+  }
+
+.story_button1:hover {
+    background-color: #ffffff;
+    color: #8246af;
+    border: 2px solid orange;
+  }
+
+
 #latest-stories {
     display: grid;
     grid-template-columns: 2fr 1fr;

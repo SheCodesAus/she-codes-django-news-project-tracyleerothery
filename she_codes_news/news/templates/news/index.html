@@ -11,7 +11,7 @@
 
 {% if request.user.is_authenticated %}
 
-<a href="{% url 'news:newStory' %}"> <button> Write New Story </button> </a>
+
 
 {% endif %}
 
@@ -22,14 +22,17 @@
     {{cat.name}}
     {% endfor %}
       {% endif %}  {% endcomment %}
-
-
+&nbsp;
+<div id = "write_story">
+<a href="{% url 'news:newStory' %}"> <button id="button"> Write New Story </button> </a>
+</div>
+&nbsp;
 <div>
-    <ul>
-        <a href="{% url 'news:category' 'Events' %}">Events</a>
-        <a href="{% url 'news:category' 'Technology' %}">Technology</a>
-        <a href="{% url 'news:category' 'Announcements' %}">Announcements</a>
-        <a href="{% url 'news:category' 'She Codes Plus' %}">She Codes Plus</a>
+    <ul id = "write_story">
+        <a class ="story_button story_button1" href="{% url 'news:category' 'Events' %}">Events</a>
+        <a class ="story_button story_button1" href="{% url 'news:category' 'Technology' %}">Technology</a>
+        <a class ="story_button story_button1" href="{% url 'news:category' 'Announcements' %}">Announcements</a>
+        <a class ="story_button story_button1" href="{% url 'news:category' 'She Codes Plus' %}">She Codes Plus</a>
     </ul>
 </div>
 
