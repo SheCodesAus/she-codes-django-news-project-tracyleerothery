@@ -105,6 +105,8 @@ h3 {
 
 
 .navbar {
+    max-width: 100%;
+    padding: 20px;
     overflow: hidden;
     /* background-color: #333; */
     font-family: Arial;
