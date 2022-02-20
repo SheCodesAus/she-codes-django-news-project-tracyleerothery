@@ -1,9 +1,16 @@
 <nav class ="navbar"> 
     <a href="{% url 'news:index' %}">Home</a>
     <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()">More
+        {% comment %} <button class="dropbtn" onclick="myFunction()">More
             <i class="fa fa-caret-down"></i>
-          </button>
+          </button> {% endcomment %}
+    {% comment %} <section class="categories-section">
+     {% if categories %} {% for cat in categories %}
+        {{cat.name}}
+        {% endfor %}
+         {% endif %} {% endcomment %}
+       
+
         {% comment %} <div class="dropdown-content" id="myDropdown">
             <a href="{% url 'news:category' 'Events' %}">Events</a>
             <a href="{% url 'news:category' 'Technology' %}">Technology</a>
