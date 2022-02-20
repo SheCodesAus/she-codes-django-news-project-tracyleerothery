@@ -49,6 +49,7 @@
     width: 50%;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
     background: white;
+    font-weight: bold;
     padding: 0px 0px 5px 15px;
     box-sizing: border-box;
     border-radius: 8px;
@@ -57,16 +58,16 @@
 
 .form-item {
     display: block;
-    margin: 0px 0px 15px 20px;
+    font-weight: bold;
+    margin: 5px 5px 15px 20px;
     padding: 4px;
     width: 80%;
     height: 5%;
     box-sizing: border-box;
     border: none;
     outline: none;
-    border-bottom: 1px solid #aaa;
-    font-size: 12px;
-
+    border-bottom: 2px solid #FFA300;
+    font-size: 16px;
 }
 
 
@@ -117,12 +118,12 @@ h3 {
 
 
 .navbar {
+    font-weight: bolder;
     max-width: 100%;
+    margin-bottom: 5px;
     padding: 15px;
-    overflow: hidden;
-    /* background-color: #333; */
-    font-family: Arial;
-    
+    overflow: hidden; 
+    font-family: var(--main-font);   
   }
   
   /* Links inside the navbar */
@@ -136,7 +137,7 @@ h3 {
   
   /* The dropdown container */
   .dropdown {
-    float: left;
+    float: right;
     overflow: hidden;
   }
   
@@ -147,7 +148,7 @@ h3 {
     outline: none;
     color: #f9f9f9;
     padding: 14px 16px;
-    background-color: #8246af;
+    background-color:#FFA300;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
   }
@@ -161,11 +162,11 @@ h3 {
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
+    background-color: #FFA300;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    
   }
   
   /* Links inside the dropdown */
@@ -191,7 +192,7 @@ h3 {
   
 
 .form-header {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: var(--main-font);
     text-decoration: none;
     font-size: 2rem;
     margin: 0;
@@ -220,17 +221,40 @@ a:active {
 }
 
 footer {
+  font-family: var(--main-font);
   text-align: center;
-  font-size: ;
+  font-size: 16px;
   padding: 20px;
   background-color: #6b469a;
   color: #fff;
 }
 
 .story_button2 {
+  font-weight: bold;
+  font-family: var(--main-font);
   background-color: #FFA300; 
   color: white;
   border: 2px solid #FFA300;
-  padding: 20px;
-  border-radius: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
+
+.story_button2 a{
+  background-color: #ffffff; 
+  color: white;
+  border: 2px solid #ffffff;
+}
+
+.story_button2 a:hover{
+  background-color: #8246af; 
+  color: white;
+  border: 2px solid #ffffff;
+}
+
+#story-image {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  
+  }

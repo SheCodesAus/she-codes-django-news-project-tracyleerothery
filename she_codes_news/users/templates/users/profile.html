@@ -3,7 +3,7 @@
 
 {% block content %}
 
-
+&nbsp
 <div id="user-profile">
     <h2>User: {{user.username}}<h2>
     {% if user.get_full_name %}
@@ -17,13 +17,19 @@
 
 </div>
 
-<div>
+<div class = "form-section">
     
     {% for story in user_story %}
         <h2 class = "profile" >{{ story.category}}</h2>
-        <h2><a href="{% url 'news:story' story.id %}">{{ story.title }}, <br> {{ story.author.username }} </a></h2>
+        <h2 class = "profile"><a href="{% url 'news:story' story.id %}">{{ story.title }}, <br> {{ story.author.username }} </a></h2>
+        <div id="story-image">
+            {% if story.image %}
+            <img src="{{ story.image }}"> 
+            {% endif %}
+            
+        </div>
         {% if story.author == request.user %}
-            <a id="edit_button" href="{% url 'news:editStory' story.id %}">Edit</a>
+            <a class="story_button2" id="edit_button" href="{% url 'news:editStory' story.id %}">Edit</a>
         {% endif %}
     {% endfor %}
    

@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Comfortaa:wght@300&family=Raleway:wght@100&display=swap');
+
+:root {
+    --main-font: 'Raleway', sans-serif;
+}
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #000;
-    font-family: "bebas-neue-by-fontfabric", Sans-serif;
+    font-family: var(--main-font);
 }
 
 
@@ -27,7 +33,7 @@ header {
     text-align: center;
 }
 #button {
-    font-family: "bebas-neue-by-fontfabric", Sans-serif;
+    font-family: var(--main-font);
     font-size: 26px;
     border-style: solid;
     border-width: 2px 2px 2px 2px;
@@ -44,9 +50,10 @@ header {
 }
 
 .story_button {
+    font-family: var(--main-font);
     background-color: #8246af; 
     border: none;
-    color: white;
+    color: #FFA300;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -59,23 +66,26 @@ header {
 }
 
 .story_button1 {
+    font-family: var(--main-font);
     background-color: #8246af; 
-    color: white;
+    color: #FFA300;
     border: 2px solid #8246af;
   }
 
   .story_button2 {
+    font-weight: bold;
+    font-family: var(--main-font);
     background-color: #FFA300; 
     color: white;
-    border: 2px solid #FFA300;
-    padding: 20px;
+    border: 4px solid #FFA300;
+    padding: 30px;
     border-radius: 25px;
   }
 
 .story_button1:hover {
     background-color: #ffffff;
     color: #8246af;
-    border: 2px solid orange
+    border: 2px solid orange;
   }
 
 
@@ -86,6 +96,7 @@ header {
     gap: 1px 1px;
     grid-template-areas: "left-1 right-1" "left-1 right-2" "left-1 right-3";
     max-height: 500px;
+    color: #000;
 }
 
 #story-card-1 {
@@ -155,10 +166,15 @@ header {
 }
 
 
+
+
 footer {
+    font-family: var(--main-font);
+    font-weight: bold;
     text-align: center;
     font-size: ;
     padding: 20px;
     background-color: #6b469a;
     color: #fff;
   }
+
