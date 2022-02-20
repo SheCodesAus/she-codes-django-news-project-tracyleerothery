@@ -97,6 +97,10 @@ h3 {
     margin: 0;
 }
 
+.profile {
+  color: #FFA300;
+}
+
 #header-text {
     flex-basis: 80%;
     display: flex;
