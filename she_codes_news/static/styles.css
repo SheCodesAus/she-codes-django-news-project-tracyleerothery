@@ -5,6 +5,8 @@
     --main-font: 'Raleway', sans-serif;
 }
 
+
+
 /* The hero image */
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
@@ -85,7 +87,7 @@ h1 {
     font-family: var(--main-font);
     text-decoration: none;
     font-size: 4rem;
-    margin: 0;
+    margin: 5px;
 }
 
 h2 {
@@ -107,11 +109,16 @@ h3 {
    
 }
 
+#title {
+  padding: 2px;
+
+}
+
 
 
 .navbar {
     max-width: 100%;
-    padding: 20px;
+    padding: 15px;
     overflow: hidden;
     /* background-color: #333; */
     font-family: Arial;
@@ -122,7 +129,6 @@ h3 {
   .navbar a {
     float: left;
     font-size: 16px;
-    color: #8246af;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -195,4 +201,20 @@ h3 {
 }
 .form-item {
     color: whitesmoke;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }

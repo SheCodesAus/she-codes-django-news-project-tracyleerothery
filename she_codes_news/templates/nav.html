@@ -1,9 +1,9 @@
 <nav class ="navbar"> 
     <a href="{% url 'news:index' %}">Home</a>
     <div class="dropdown">
-         <button class="dropbtn" onclick="myFunction()">More
+    <button class="dropbtn" onclick="myFunction()">More
             <i class="fa fa-caret-down"></i>
-          </button> 
+    </button> 
     
 
         <div class="dropdown-content" id="myDropdown">
@@ -19,7 +19,7 @@
         
     {% else %}
         <a href="{% url 'login' %}">login</a>
-        <a href="{% url 'users:createAccount' %}">Create Aaccount</a>
+        <a href="{% url 'users:createAccount' %}">Create Account</a>
     {% endif %}
 
 
