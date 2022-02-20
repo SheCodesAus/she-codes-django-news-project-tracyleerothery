@@ -13,7 +13,7 @@
     background-image: url("./images/background_image.jpeg");
   
     /* Set a specific height */
-    height: 50vh;
+    height: 60vh;
   
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
@@ -217,4 +217,20 @@ a:hover {
 
 a:active {
   text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  font-size: ;
+  padding: 20px;
+  background-color: #6b469a;
+  color: #fff;
+}
+
+.story_button2 {
+  background-color: #FFA300; 
+  color: white;
+  border: 2px solid #FFA300;
+  padding: 20px;
+  border-radius: 25px;
 }

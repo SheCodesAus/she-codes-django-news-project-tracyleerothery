@@ -64,6 +64,14 @@ header {
     border: 2px solid #8246af;
   }
 
+  .story_button2 {
+    background-color: #FFA300; 
+    color: white;
+    border: 2px solid #FFA300;
+    padding: 20px;
+    border-radius: 25px;
+  }
+
 .story_button1:hover {
     background-color: #ffffff;
     color: #8246af;
@@ -145,3 +153,12 @@ header {
     margin: 0 0 10px 10px;
     width: 50%;
 }
+
+
+footer {
+    text-align: center;
+    font-size: ;
+    padding: 20px;
+    background-color: #6b469a;
+    color: #fff;
+  }
