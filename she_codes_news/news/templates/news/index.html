@@ -30,14 +30,14 @@
 <a href="{% url 'news:newStory' %}"> <button id="button"> Write New Story </button> </a>
 </div>
 &nbsp;
-<div>
+{% comment %} <div>
     <ul id = "write_story">
         <a class ="story_button story_button1" href="{% url 'news:category' 'Events' %}">Events</a>
         <a class ="story_button story_button1" href="{% url 'news:category' 'Technology' %}">Technology</a>
         <a class ="story_button story_button1" href="{% url 'news:category' 'Announcements' %}">Announcements</a>
         <a class ="story_button story_button1" href="{% url 'news:category' 'She Codes Plus' %}">She Codes Plus</a>
     </ul>
-</div>
+</div> {% endcomment %}
 
 <h2>Latest News</h2>
 

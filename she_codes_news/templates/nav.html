@@ -4,12 +4,12 @@
         <button class="dropbtn" onclick="myFunction()">More
             <i class="fa fa-caret-down"></i>
           </button>
-        <div class="dropdown-content" id="myDropdown">
+        {% comment %} <div class="dropdown-content" id="myDropdown">
             <a href="{% url 'news:category' 'Events' %}">Events</a>
             <a href="{% url 'news:category' 'Technology' %}">Technology</a>
             <a href="{% url 'news:category' 'Announcements' %}">Announcements</a>
             <a href="{% url 'news:category' 'She Codes Plus' %}">She Codes Plus</a>
-        </div>
+        </div> {% endcomment %}
 
     {% if request.user.is_authenticated %} 
         <a href="{% url 'users:profile' pk=request.user.id %}">{{ user.username}}</a>
