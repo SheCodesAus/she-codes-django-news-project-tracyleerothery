@@ -1,21 +1,87 @@
-    <h2>Latest News</h2>
+{% extends "base.html" %}
 
-    <div id="latest-stories">
-        {% if latest_stories %}
-            {% for story in latest_stories %}
-                <p>{{ story.title }}</p>
-            {% endfor %}
-        {% else %}
-            <p>No stories are available.</p>
-        {% endif %}
-    </div>
+{% load static %}
 
-    <div id="all-stories">
-        {% if latest_stories %}
-            {% for story in all_stories %}
-                <p>{{ story.title }}</p>
-            {% endfor %}
-        {% else %}
-            <p>No stories are available.</p>
-        {% endif %}
-    </div>
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" type="text/css" href="{% static 'news/styles.css' %}">
+
+
+
+{% endblock %}
+
+{% block content%}
+
+
+{% if request.user.is_authenticated %}
+
+
+
+{% endif %}
+
+
+
+
+{% comment %} <section class="categories-section">
+{% if categories %}
+  {% for cat in categories %}
+    
+    {{cat.name}}
+    {% endfor %}
+      {% endif %}  {% endcomment %}
+&nbsp;
+<div id = "write_story">
+<a href="{% url 'news:newStory' %}"> <button id="button"> Write New Story </button> </a>
+</div>
+&nbsp;
+
+<div>
+    <ul id = "write_story">
+        <a class ="story_button story_button1" href="{% url 'news:category' 'Events' %}">Events</a>
+        <a class ="story_button story_button1" href="{% url 'news:category' 'Technology' %}">Technology</a>
+        <a class ="story_button story_button1" href="{% url 'news:category' 'Announcements' %}">Announcements</a>
+        <a class ="story_button story_button1" href="{% url 'news:category' 'She Codes Plus' %}">She Codes Plus</a>
+    </ul>
+</div> 
+
+<h2>Latest News</h2>
+
+<div id="latest-stories">
+  {% if latest_stories %} {% for story in latest_stories %}
+  {% include "./storyCard.html" with story=story position=forloop.counter %}
+  {% endfor %}
+  {% else %}
+    <p>No stories are available.</p>
+  {% endif %}
+</div>
+
+
+<div id="all-stories">
+  {% if all_stories %} {% for story in all_stories %}
+  {% include "./storyCard.html" with story=story %}
+  {% endfor %} {% else %}
+  <p>No stories are available.</p>
+  {% endif %}
+</div>
+
+
+<div>
+  <footer>
+
+        <p>Copyright © 2022 Tracy Rothery • Perth based Freelance Web Designer &
+          Developer</p>&nbsp
+          <p>
+            tracy.lee@gmail.com &nbsp
+            0431 444 888</p>
+          <button class="story_button2">Subcribe to our mailing list</button>
+      </div>
+   
+  </footer>
+</div>
+
+
+
+</html>
+
+
+
+{% endblock %}

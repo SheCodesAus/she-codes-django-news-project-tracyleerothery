@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel='stylesheet' type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{{category}}
+
+<div id="all-stories">
+    {% if category.stories.all %} {% for story in category.stories.all %}
+    {% include "./storyCard.html" with story=story %}
+    {% endfor %} {% else %}
+    <p>No stories are available.</p>
+    {% endif %}
+ </div>
+
+
+
+
+{% endblock %}

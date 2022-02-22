@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+&nbsp
+<div id="user-profile">
+    <h2>User: {{user.username}}<h2>
+    {% if user.get_full_name %}
+        <h3>  Hello! <span style="color: #8246af"> {{user.get_full_name}}</span> ,  Welcome back!</h3>  
+    {% else %}
+        <h3>{{user.email}}</h3>
+    {% endif %}
+    {% if user.image %}
+        <img scr="{% static 'users/defult.jpg' %}">
+    {% endif %}
+
+</div>
+
+<div class = "form-section">
+    
+    {% for story in user_story %}
+        <h2 class = "profile" >{{ story.category}}</h2>
+        <h2 class = "profile"><a href="{% url 'news:story' story.id %}">{{ story.title }}, <br> {{ story.author.username }} </a></h2>
+        <div id="story-image">
+            {% if story.image %}
+            <img src="{{ story.image }}"> 
+            {% endif %}
+            
+        </div>
+        {% if story.author == request.user %}
+            <a class="story_button2" id="edit_button" href="{% url 'news:editStory' story.id %}">Edit</a>
+        {% endif %}
+    {% endfor %}
+   
+</div>
+
+    
+
+<div>
+    <footer>
+  
+          <p>Copyright © 2022 Tracy Rothery • Perth based Freelance Web Designer &
+            Developer</p>&nbsp
+            <p>
+              tracy.lee@gmail.com &nbsp
+              0431 444 888</p>
+            <button class="story_button2">Subcribe to our mailing list</button>
+        </div>
+     
+    </footer>
+</div>
+
+
+{% endblock content%}
+
+
+
+
+
+

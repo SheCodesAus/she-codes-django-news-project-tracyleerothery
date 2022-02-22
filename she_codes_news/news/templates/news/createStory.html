@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel='stylesheet' type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+&nbsp
+<div>
+<h2 class="form-header"> Submit a New Story! </h2>
+<section class="form-section">    
+    <form class="form-item" action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="form-button" type="submit" value="submit">
+
+    </form>
+</div>
+    
+
+<div>
+    <footer>
+  
+          <p>Copyright © 2022 Tracy Rothery • Perth based Freelance Web Designer &
+            Developer</p>&nbsp
+            <p>
+              tracy.lee@gmail.com &nbsp
+              0431 444 888</p>
+            <button class="story_button2">Subcribe to our mailing list</button>
+        </div>
+     
+    </footer>
+</div>
+
+
+{% endblock %}
+
